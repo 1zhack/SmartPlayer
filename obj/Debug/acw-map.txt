@@ -1,0 +1,4 @@
+App2.MainActivity, SmartPlayer;md51079e10a793704153b98f68342f21927.MainActivity
+App2.MainActivity, SmartPlayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md51079e10a793704153b98f68342f21927.MainActivity
+App2.MainActivity;md51079e10a793704153b98f68342f21927.MainActivity
+app2.MainActivity;md51079e10a793704153b98f68342f21927.MainActivity
