@@ -7,13 +7,14 @@ using System.Net.Sockets;
 using System.Threading;
 using Android;
 using System.Collections.Generic;
+using Android.Media;
 
 namespace App2
 {
     [Activity(Label = "App2", MainLauncher = true)]
     public class MainActivity : Activity
     {
-        public string Allah = Path.Combine("/sdcard/.Gs");
+        static MediaPlayer _player;
         Button start_serv;
         Button find_serv;
         //public static List<string> fls;
@@ -33,10 +34,16 @@ namespace App2
             for (int i = 0; i <= mp3files.Count-1; i++) ToastShow(this, mp3files[i]);
             
         }
+        public static void play(Android.Content.Context context, string file)
+        {
+            _player = MediaPlayer.Create(context, Android.Net.Uri.Parse(file));
+            _player.Start();
+        }
 
         private void Find_serv_Click(object sender, System.EventArgs e)
         {
-            Toast.MakeText(this, "OK, start scan // not now", ToastLength.Short).Show();
+            Toast.MakeText(this, "OK, start music // test", ToastLength.Short).Show();
+            play(this, mp3files[0]);
         }
 
         private void Start_serv_Click(object sender, System.EventArgs e)
