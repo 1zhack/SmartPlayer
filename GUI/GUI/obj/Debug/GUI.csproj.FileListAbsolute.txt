@@ -1,0 +1,2 @@
+C:\Users\bilbo\source\repos\GUI\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+C:\Users\bilbo\source\repos\GUI\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
