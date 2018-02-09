@@ -8,15 +8,22 @@ using System.Threading;
 using Android;
 using System.Collections.Generic;
 using Android.Media;
+<<<<<<< HEAD
 using TagLib;
+=======
+>>>>>>> c8d29f8ba51e7622142adc7e2ac24296e81178fb
 
 namespace App2
 {
     [Activity(Label = "App2", MainLauncher = true)]
     public class MainActivity : Activity
     {
+<<<<<<< HEAD
         static int now = 0;
         static MediaPlayer _player = new MediaPlayer();
+=======
+        static MediaPlayer _player;
+>>>>>>> c8d29f8ba51e7622142adc7e2ac24296e81178fb
         Button start_serv;
         Button find_serv;
         Button next;
@@ -38,6 +45,11 @@ namespace App2
             mp3files = ParseFiles();
             for (int i = 0; i <= mp3files.Count-1; i++) ToastShow(this, mp3files[i]);
             
+        }
+        public static void play(Android.Content.Context context, string file)
+        {
+            _player = MediaPlayer.Create(context, Android.Net.Uri.Parse(file));
+            _player.Start();
         }
 
         private void Next_Click(object sender, System.EventArgs e)
@@ -73,12 +85,16 @@ namespace App2
         private void Find_serv_Click(object sender, System.EventArgs e)
         {
             Toast.MakeText(this, "OK, start music // test", ToastLength.Short).Show();
+<<<<<<< HEAD
             if (_player.IsPlaying == false) Play(this, mp3files[now]);
             else
             {
                 _player.Reset();
                 Play(this, mp3files[0]);
             }
+=======
+            play(this, mp3files[0]);
+>>>>>>> c8d29f8ba51e7622142adc7e2ac24296e81178fb
         }
 
         private void Start_serv_Click(object sender, System.EventArgs e)
