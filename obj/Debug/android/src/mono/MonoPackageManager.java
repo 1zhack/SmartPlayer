@@ -107,6 +107,9 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "SmartPlayer.dll" comes first in this list. */
 		"SmartPlayer.dll",
+		"ICSharpCode.SharpZipLib.dll",
+		"policy.2.0.taglib-sharp.dll",
+		"taglib-sharp.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};

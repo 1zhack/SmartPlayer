@@ -14,8 +14,11 @@ public final class R {
         public static final int primary=0x7f030000;
     }
     public static final class id {
-        public static final int scan_ftp=0x7f050001;
-        public static final int start_ftp=0x7f050000;
+        public static final int Now=0x7f050004;
+        public static final int lib=0x7f050003;
+        public static final int next=0x7f050002;
+        public static final int scan_ftp=0x7f050000;
+        public static final int start_ftp=0x7f050001;
     }
     public static final class layout {
         public static final int main=0x7f020000;

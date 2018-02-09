@@ -16,3 +16,8 @@ C:\Users\bilbo\source\repos\App2\App2\obj\Debug\SmartPlayer.dll
 C:\Users\bilbo\source\repos\App2\App2\obj\Debug\SmartPlayer.pdb
 C:\Users\bilbo\source\repos\App2\App2\bin\Debug\SmartPlayer.dll.mdb
 C:\Users\bilbo\source\repos\App2\App2\obj\Debug\android\assets\SmartPlayer.dll.mdb
+C:\Users\bilbo\source\repos\App2\App2\bin\Debug\policy.2.0.taglib-sharp.dll
+C:\Users\bilbo\source\repos\App2\App2\bin\Debug\taglib-sharp.dll
+C:\Users\bilbo\source\repos\App2\App2\bin\Debug\policy.2.0.taglib-sharp.config
+C:\Users\bilbo\source\repos\App2\App2\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\bilbo\source\repos\App2\App2\bin\Debug\ICSharpCode.SharpZipLib.xml

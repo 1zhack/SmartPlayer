@@ -7,13 +7,28 @@
     android:minHeight="25px"
     android:background="@color/primary">
     <Button
-        android:text="Start_Server_Test"
+        android:text="Start Playing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scan_ftp" />
+    <Button
+        android:text="Pause"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/start_ftp" />
     <Button
-        android:text="Find_Server_Test"
+        android:text="Next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/scan_ftp"/>
+        android:id="@+id/next" />
+    <TextView
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lib" />
+    <TextView
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Now" />
 </LinearLayout>
