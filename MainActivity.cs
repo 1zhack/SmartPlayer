@@ -8,13 +8,21 @@ using System.Threading;
 using Android;
 using System.Collections.Generic;
 using Android.Media;
+<<<<<<< HEAD
 using TagLib;
+=======
+<<<<<<< HEAD
+using TagLib;
+=======
+>>>>>>> c8d29f8ba51e7622142adc7e2ac24296e81178fb
+>>>>>>> 93f4c1827103d346e1c0e559eeb40cbe530c19cd
 
 namespace App2
 {
     [Activity(Label = "App2", MainLauncher = true)]
     public class MainActivity : Activity
     {
+<<<<<<< HEAD
         static int now = 0;
         static MediaPlayer _player = new MediaPlayer();
         Button start_serv;
@@ -22,6 +30,17 @@ namespace App2
         Button next;
         TextView nowplay;
         TextView lib;
+=======
+<<<<<<< HEAD
+        static int now = 0;
+        static MediaPlayer _player = new MediaPlayer();
+=======
+        static MediaPlayer _player;
+>>>>>>> c8d29f8ba51e7622142adc7e2ac24296e81178fb
+        Button start_serv;
+        Button find_serv;
+        Button next;
+>>>>>>> 93f4c1827103d346e1c0e559eeb40cbe530c19cd
         //public static List<string> fls;
         public static List<string> mp3files;
         protected override void OnCreate(Bundle savedInstanceState)
@@ -34,8 +53,11 @@ namespace App2
             start_serv = FindViewById<Button>(Resource.Id.start_ftp);
             find_serv = FindViewById<Button>(Resource.Id.scan_ftp);
             next = FindViewById<Button>(Resource.Id.next);
+<<<<<<< HEAD
            // nowplay = FindViewById<TextView>(Resource.Id.Now);
             lib = FindViewById<TextView>(Resource.Id.lib);
+=======
+>>>>>>> 93f4c1827103d346e1c0e559eeb40cbe530c19cd
             start_serv.Click += Start_serv_Click;
             find_serv.Click += Find_serv_Click;
             next.Click += Next_Click;
@@ -92,16 +114,61 @@ namespace App2
             _player = MediaPlayer.Create(context, Android.Net.Uri.Parse(file));
             _player.Start();
         }
+        public static void play(Android.Content.Context context, string file)
+        {
+            _player = MediaPlayer.Create(context, Android.Net.Uri.Parse(file));
+            _player.Start();
+        }
+
+        private void Next_Click(object sender, System.EventArgs e)
+        {
+            if (_player.IsPlaying)
+            {
+                _player.Stop();
+                if(now == mp3files.Count - 1)
+                {
+                    now = 0;
+                    Play(this, mp3files[now]);
+                }
+                else
+                {
+                    Play(this, mp3files[now + 1]);
+                    now++;
+                }
+                
+            }
+            else
+            {
+                Play(this, mp3files[now + 1]);
+                now++;
+            }
+        }
+
+        public static void Play(Android.Content.Context context, string file)
+        {
+            _player = MediaPlayer.Create(context, Android.Net.Uri.Parse(file));
+            _player.Start();
+        }
 
         private void Find_serv_Click(object sender, System.EventArgs e)
         {
             Toast.MakeText(this, "OK, start music // test", ToastLength.Short).Show();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 93f4c1827103d346e1c0e559eeb40cbe530c19cd
             if (_player.IsPlaying == false) Play(this, mp3files[now]);
             else
             {
                 _player.Reset();
                 Play(this, mp3files[0]);
             }
+<<<<<<< HEAD
+=======
+=======
+            play(this, mp3files[0]);
+>>>>>>> c8d29f8ba51e7622142adc7e2ac24296e81178fb
+>>>>>>> 93f4c1827103d346e1c0e559eeb40cbe530c19cd
         }
 
         private void Start_serv_Click(object sender, System.EventArgs e)

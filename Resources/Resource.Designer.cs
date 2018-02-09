@@ -60,6 +60,12 @@ namespace App2
 		public partial class Id
 		{
 			
+<<<<<<< HEAD
+=======
+			// aapt resource value: 0x7f050004
+			public const int Now = 2131034116;
+			
+>>>>>>> 93f4c1827103d346e1c0e559eeb40cbe530c19cd
 			// aapt resource value: 0x7f050003
 			public const int lib = 2131034115;
 			

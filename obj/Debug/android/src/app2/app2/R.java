@@ -14,6 +14,10 @@ public final class R {
         public static final int primary=0x7f030000;
     }
     public static final class id {
+<<<<<<< HEAD
+=======
+        public static final int Now=0x7f050004;
+>>>>>>> 93f4c1827103d346e1c0e559eeb40cbe530c19cd
         public static final int lib=0x7f050003;
         public static final int next=0x7f050002;
         public static final int scan_ftp=0x7f050000;

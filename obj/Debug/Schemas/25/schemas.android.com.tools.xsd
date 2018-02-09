@@ -2,7 +2,11 @@
 <xs:schema xmlns:tools="http://schemas.android.com/tools" attributeFormDefault="qualified" targetNamespace="http://schemas.android.com/tools" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v25</xs:documentation>
+<<<<<<< HEAD
     <xs:documentation>09.02.2018 18:22:44</xs:documentation>
+=======
+    <xs:documentation>09.02.2018 15:53:27</xs:documentation>
+>>>>>>> 93f4c1827103d346e1c0e559eeb40cbe530c19cd
   </xs:annotation>
   <xs:attribute name="layout">
     <xs:annotation>

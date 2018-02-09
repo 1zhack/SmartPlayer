@@ -2,7 +2,11 @@
 <xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v25</xs:documentation>
+<<<<<<< HEAD
     <xs:documentation>09.02.2018 18:22:44</xs:documentation>
+=======
+    <xs:documentation>09.02.2018 15:53:27</xs:documentation>
+>>>>>>> 93f4c1827103d346e1c0e559eeb40cbe530c19cd
   </xs:annotation>
   <xs:attribute name="accessibilityLiveRegion">
     <xs:annotation>
@@ -2554,6 +2558,79 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@+id/" />
             <xs:enumeration value="@+id/checkedTextView1" />
+<<<<<<< HEAD
+=======
+            <xs:enumeration value="@id/lib" />
+            <xs:enumeration value="@id/next" />
+            <xs:enumeration value="@id/Now" />
+            <xs:enumeration value="@id/scan_ftp" />
+            <xs:enumeration value="@id/start_ftp" />
+            <xs:enumeration value="@android:id/accessibilityActionContextClick" />
+            <xs:enumeration value="@android:id/accessibilityActionScrollDown" />
+            <xs:enumeration value="@android:id/accessibilityActionScrollLeft" />
+            <xs:enumeration value="@android:id/accessibilityActionScrollRight" />
+            <xs:enumeration value="@android:id/accessibilityActionScrollToPosition" />
+            <xs:enumeration value="@android:id/accessibilityActionScrollUp" />
+            <xs:enumeration value="@android:id/accessibilityActionSetProgress" />
+            <xs:enumeration value="@android:id/accessibilityActionShowOnScreen" />
+            <xs:enumeration value="@android:id/addToDictionary" />
+            <xs:enumeration value="@android:id/background" />
+            <xs:enumeration value="@android:id/button1" />
+            <xs:enumeration value="@android:id/button2" />
+            <xs:enumeration value="@android:id/button3" />
+            <xs:enumeration value="@android:id/candidatesArea" />
+            <xs:enumeration value="@android:id/checkbox" />
+            <xs:enumeration value="@android:id/closeButton" />
+            <xs:enumeration value="@android:id/content" />
+            <xs:enumeration value="@android:id/copy" />
+            <xs:enumeration value="@android:id/copyUrl" />
+            <xs:enumeration value="@android:id/custom" />
+            <xs:enumeration value="@android:id/cut" />
+            <xs:enumeration value="@android:id/edit" />
+            <xs:enumeration value="@android:id/empty" />
+            <xs:enumeration value="@android:id/extractArea" />
+            <xs:enumeration value="@android:id/hint" />
+            <xs:enumeration value="@android:id/home" />
+            <xs:enumeration value="@android:id/icon" />
+            <xs:enumeration value="@android:id/icon_frame" />
+            <xs:enumeration value="@android:id/icon1" />
+            <xs:enumeration value="@android:id/icon2" />
+            <xs:enumeration value="@android:id/input" />
+            <xs:enumeration value="@android:id/inputArea" />
+            <xs:enumeration value="@android:id/inputExtractEditText" />
+            <xs:enumeration value="@android:id/keyboardView" />
+            <xs:enumeration value="@android:id/list" />
+            <xs:enumeration value="@android:id/list_container" />
+            <xs:enumeration value="@android:id/mask" />
+            <xs:enumeration value="@android:id/message" />
+            <xs:enumeration value="@android:id/navigationBarBackground" />
+            <xs:enumeration value="@android:id/paste" />
+            <xs:enumeration value="@android:id/pasteAsPlainText" />
+            <xs:enumeration value="@android:id/primary" />
+            <xs:enumeration value="@android:id/progress" />
+            <xs:enumeration value="@android:id/redo" />
+            <xs:enumeration value="@android:id/replaceText" />
+            <xs:enumeration value="@android:id/secondaryProgress" />
+            <xs:enumeration value="@android:id/selectAll" />
+            <xs:enumeration value="@android:id/selectedIcon" />
+            <xs:enumeration value="@android:id/selectTextMode" />
+            <xs:enumeration value="@android:id/shareText" />
+            <xs:enumeration value="@android:id/startSelectingText" />
+            <xs:enumeration value="@android:id/statusBarBackground" />
+            <xs:enumeration value="@android:id/stopSelectingText" />
+            <xs:enumeration value="@android:id/summary" />
+            <xs:enumeration value="@android:id/switch_widget" />
+            <xs:enumeration value="@android:id/switchInputMethod" />
+            <xs:enumeration value="@android:id/tabcontent" />
+            <xs:enumeration value="@android:id/tabhost" />
+            <xs:enumeration value="@android:id/tabs" />
+            <xs:enumeration value="@android:id/text1" />
+            <xs:enumeration value="@android:id/text2" />
+            <xs:enumeration value="@android:id/title" />
+            <xs:enumeration value="@android:id/toggle" />
+            <xs:enumeration value="@android:id/undo" />
+            <xs:enumeration value="@android:id/widget_frame" />
+>>>>>>> 93f4c1827103d346e1c0e559eeb40cbe530c19cd
           </xs:restriction>
         </xs:simpleType>
       </xs:union>
