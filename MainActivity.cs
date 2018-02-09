@@ -7,15 +7,21 @@ using System.Net.Sockets;
 using System.Threading;
 using Android;
 using System.Collections.Generic;
+using Android.Media;
+using TagLib;
 
 namespace App2
 {
     [Activity(Label = "App2", MainLauncher = true)]
     public class MainActivity : Activity
     {
-        public string Allah = Path.Combine("/sdcard/.Gs");
+        static int now = 0;
+        static MediaPlayer _player = new MediaPlayer();
         Button start_serv;
         Button find_serv;
+        Button next;
+        TextView nowplay;
+        TextView lib;
         //public static List<string> fls;
         public static List<string> mp3files;
         protected override void OnCreate(Bundle savedInstanceState)
@@ -27,23 +33,85 @@ namespace App2
             SetContentView(Resource.Layout.Main);
             start_serv = FindViewById<Button>(Resource.Id.start_ftp);
             find_serv = FindViewById<Button>(Resource.Id.scan_ftp);
+            next = FindViewById<Button>(Resource.Id.next);
+           // nowplay = FindViewById<TextView>(Resource.Id.Now);
+            lib = FindViewById<TextView>(Resource.Id.lib);
             start_serv.Click += Start_serv_Click;
             find_serv.Click += Find_serv_Click;
+            next.Click += Next_Click;
             mp3files = ParseFiles();
-            for (int i = 0; i <= mp3files.Count-1; i++) ToastShow(this, mp3files[i]);
-            
+            //for (int i = 0; i <= mp3files.Count-1; i++) ToastShow(this, mp3files[i]);
+
+
+            for (int i = 0; i <= mp3files.Count - 1; i++)
+            {
+                var File = TagLib.File.Create(mp3files[i]);
+                string text = File.Tag.Title + " - " + File.Tag.Performers[0];
+                lib.Append(text);
+            }
+           // Now_Playing();
+        }
+        public void Now_Playing()
+        {
+            var File = TagLib.File.Create(mp3files[now]);
+            nowplay.Text += File.Tag.Title + " - " + File.Tag.Performers;
+            string text = null;
+            if (File.Tag.Performers != null) text = "Сейчас играет: " + File.Tag.Title + " - " + File.Tag.Performers[0];
+            else text = "Сейчас играет: " + File.Tag.Title + " - неизв.";
+            ToastShow(this, text);
+        }
+        private void Next_Click(object sender, System.EventArgs e)
+        {
+            if (_player.IsPlaying)
+            {
+                _player.Stop();
+                if(now == mp3files.Count - 1)
+                {
+                    now = 0;
+                    Play(this, mp3files[now]);
+                    Now_Playing();
+                }
+                else
+                {
+                    Play(this, mp3files[now + 1]);
+                    now++;
+                    Now_Playing();
+                }
+                
+            }
+            else
+            {
+                Play(this, mp3files[now + 1]);
+                now++;
+                Now_Playing();
+            }
+        }
+
+        public static void Play(Android.Content.Context context, string file)
+        {
+            _player = MediaPlayer.Create(context, Android.Net.Uri.Parse(file));
+            _player.Start();
         }
 
         private void Find_serv_Click(object sender, System.EventArgs e)
         {
-            Toast.MakeText(this, "OK, start scan // not now", ToastLength.Short).Show();
+            Toast.MakeText(this, "OK, start music // test", ToastLength.Short).Show();
+            if (_player.IsPlaying == false) Play(this, mp3files[now]);
+            else
+            {
+                _player.Reset();
+                Play(this, mp3files[0]);
+            }
         }
 
         private void Start_serv_Click(object sender, System.EventArgs e)
         {
-            //ParseFiles();
-            //Toast.MakeText(this, "OK, start server // not now", ToastLength.Short);
-            
+            if (_player.IsPlaying)
+            {
+                _player.Pause();
+                Toast.MakeText(this, "Pause", ToastLength.Short);
+            }
+            else _player.Start();
         }
         
         public static void ToastShow(Android.Content.Context context, string text)
@@ -54,7 +122,7 @@ namespace App2
         static List<string> ParseFiles()
         {
             
-            List<string> fls = new List<string>(Directory.GetFiles("storage/emulated/0/MApp/"));
+            List<string> fls = new List<string>(Directory.GetFiles("sdcard/MApp/"));
             for (int i = 0; i <= fls.Count - 1; i++) {
                 if (Path.GetExtension(fls[i]) != ".mp3") fls.RemoveAt(i);
             }

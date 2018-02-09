@@ -3,7 +3,7 @@
   <PropertyGroup>
     <SelectedDevice>Android_ARM_Nougat</SelectedDevice>
     <DefaultDevice>Android_ARM_Nougat</DefaultDevice>
-    <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
-    <AndroidDesignerPreferredTheme>Theme.DeviceDefault.Light</AndroidDesignerPreferredTheme>
+    <AndroidDesignerPreferredDevice>Nexus 7 2013</AndroidDesignerPreferredDevice>
+    <AndroidDesignerPreferredTheme>Theme.Holo</AndroidDesignerPreferredTheme>
   </PropertyGroup>
 </Project>
